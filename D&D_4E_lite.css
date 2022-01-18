@@ -1,4 +1,7 @@
 /* Smaller margins - remove these if you want the huge default left margin */
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab:wght@700&display=swap');
+
 .sheet-rolltemplate-default {
   margin-left: -37px;
 }
@@ -19,6 +22,8 @@
   text-align: left;
   color: var(--header-text-use);
   padding: 5px;
+  background-image:var(--header-gradient);
+  font-family:var(--header-font);
 }
 .sheet-rolltemplate-default .sheet-name {
   font-size:1.3em;
@@ -54,13 +59,24 @@
 .sheet-rolltemplate-default .sheet-container.sheet-use-sk {
   --header-bg-use: #3A5ECA;
 }
+.sheet-rolltemplate-default .sheet-container.sheet-use-ot {
+  --header-bg-use: #000;
+}
 .sheet-rolltemplate-default .sheet-container.sheet-use-wh {
   --header-bg-use: #ffffff;
   --header-text-use: #000;
 }
-
-.sheet-rolltemplate-default .sheet-container.sheet-rep-1 {
-  --header-text-use: #8db1f0;
+.sheet-rolltemplate-default .sheet-container.sheet-use-oraculon {
+  --header-bg-use: #740249;
+  --header-font: 'Righteous', cursive;
+  --header-gradient: linear-gradient(90deg, rgba(116,2,73,1) 0%, rgba(37,0,0,1) 100%); 
+  --header-text-use: #d6c6ff;
+}
+.sheet-rolltemplate-default .sheet-container.sheet-use-monsmod {
+  --header-bg-use: #000;
+   --header-font: 'Josefin Slab', cursive;
+  --header-gradient: linear-gradient(0deg, rgba(86,98,125,1) 0%, rgba(7,0,223,1) 100%); 
+  --header-text-use: #fff;
 }
 
 /* Allprops part */
@@ -89,12 +105,9 @@
 */
 
 /* Make even-numbered rows grey */
-.sheet-rolltemplate-default .sheet-content :nth-child(4n+3),
-.sheet-rolltemplate-default .sheet-content :nth-child(4n) {
-    background: -webkit-linear-gradient(left,rgba(217, 209, 199,1),rgba(217, 209, 199,0.25)); /*Safari 5.1-6*/
-    background: -o-linear-gradient(right,rgba(217, 209, 199,1),rgba(217, 209, 199,0.25)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(right,rgba(217, 209, 199,1),rgba(217, 209, 199,0.25)); /*Fx 3.6-15*/
-    background: linear-gradient(to right, rgba(217, 209, 199,1), rgba(217, 209, 199,0.25)); /*Standard*/
+.sheet-rolltemplate-default .sheet-content [class^="sheet"]:nth-child(4n+3),
+.sheet-rolltemplate-default .sheet-content [class^="sheet"]:nth-child(4n) {
+ background:#dad2c8;
 }
 
 /* Description field */
